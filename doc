@@ -3,3 +3,7 @@ npm init -y
 
 Biblioteca que ajudar a realizar commits no padrao: chore, fix feat.. etc
 npm i -D git-commit-msg-linter
+
+instalar typescript
+npm i - D typescript @types/node
+add o tsconfig --> usar o padrao do cra
