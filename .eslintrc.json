@@ -6,15 +6,11 @@
     },
     "extends": [
       "standard-with-typescript",
-      "plugin:react/recommended",
-      "plugin:cypress/recommended"
-    ],
-    "env": {
-      "cypress/globals": true
-    },
-    "plugins": ["react", "cypress"],
+      "plugin:react/recommended"
+    ], 
+    "plugins": ["react"],
     "parserOptions": {
-      "project": "./tsconfig-eslint.json"
+      "project": "./tsconfig.json"
     },
     "rules": {
       "@typescript-eslint/consistent-type-definitions": "off", // user interface  e type alias

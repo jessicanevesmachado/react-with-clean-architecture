@@ -25,3 +25,8 @@ exemplo: antes de subir arquivos do tipo ts ou tsx rode tal script.. isso é con
 
 Husk --> add o arquivo huskyrc e no pre commit o husk chama o lint-staged que bate na conf do arquivo .lintstagedrc.json
 
+add o scrip no package -->  "prepare": "husky install"
+executa --> npm run prepare
+cria o hook de pre commit --> npx husky add .husky/pre-commit "npx lint-staged"
+
+
