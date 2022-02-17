@@ -29,4 +29,8 @@ add o scrip no package -->  "prepare": "husky install"
 executa --> npm run prepare
 cria o hook de pre commit --> npx husky add .husky/pre-commit "npx lint-staged"
 
+** instalar o jest para typescript
+npm i -D jest @types/jest ts-jest
+add o arquivo --> jest.config
+
 
