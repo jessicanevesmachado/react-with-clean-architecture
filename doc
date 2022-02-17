@@ -1,12 +1,27 @@
+Configurando o ambiente
+
 git init
 npm init -y
 
-Biblioteca que ajudar a realizar commits no padrao: chore, fix feat.. etc
+***Biblioteca que ajudar a realizar commits no padrao: chore, fix feat.. etc
 npm i -D git-commit-msg-linter
 
-instalar typescript
+***instalar typescript
 npm i - D typescript @types/node
 add o tsconfig --> usar o padrao do cra
 
-instalar o eslint u
+***instalar o eslint u
 npm i -D eslint eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard @typescript-eslint/eslint-plugin
+
+add eslintrc.json --> onde tera as regras do lint
+add eslintignore --> onde ignore arquivos pro lint
+
+*** add husk impede subir commit defeituosos
+npm i -D lint-staged husky
+
+add o arquivo .lintstagedrc.json --> pega todos os arquivos que vao entrar no proximo commit 
+e em cima desses arquivos, eu quero aplicar alguns scripts. 
+exemplo: antes de subir arquivos do tipo ts ou tsx rode tal script.. isso é configurado no .lintstagedrc.json
+
+Husk --> add o arquivo huskyrc e no pre commit o husk chama o lint-staged que bate na conf do arquivo .lintstagedrc.json
+
