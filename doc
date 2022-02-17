@@ -7,3 +7,6 @@ npm i -D git-commit-msg-linter
 instalar typescript
 npm i - D typescript @types/node
 add o tsconfig --> usar o padrao do cra
+
+instalar o eslint u
+npm i -D eslint eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard @typescript-eslint/eslint-plugin
