@@ -33,6 +33,13 @@ cria o hook de pre commit --> npx husky add .husky/pre-commit "npx lint-staged"
 npm i -D jest @types/jest ts-jest
 add o arquivo --> jest.config
 
+explicacao do package script
+ "test": "jest --passWithNoTests", // por padrao o jest nao aceita testes sem passar, por isso coloca essa fleg
+    "test:staged": "npm test -- --findRelatedTests", // ele vai procurar dentro dos arquivos no proximos commit, e roda somente esses testes, previne rodar
+    todos os teste do sistema.
+    "test:ci": "npm test -- --coverage",
+
+
 
 ***  Instalando o Commitizen
 O Commitizen é uma biblioteca que vai nos ajudar a criar os commits seguindo o padrão do Conventional Commit
