@@ -34,3 +34,7 @@ npm i -D jest @types/jest ts-jest
 add o arquivo --> jest.config
 
 
+***  Instalando o Commitizen
+O Commitizen é uma biblioteca que vai nos ajudar a criar os commits seguindo o padrão do Conventional Commit
+
+
