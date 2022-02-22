@@ -44,4 +44,7 @@ explicacao do package script
 ***  Instalando o Commitizen
 O Commitizen é uma biblioteca que vai nos ajudar a criar os commits seguindo o padrão do Conventional Commit
 
+-- add faker
+npm i -D faker @types/faker
+
 
