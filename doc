@@ -44,6 +44,14 @@ explicacao do package script
 ***  Instalando o Commitizen
 O Commitizen é uma biblioteca que vai nos ajudar a criar os commits seguindo o padrão do Conventional Commit
 
+Install Commitizen with 
+npm install --save-dev commitizen.
+
+Next, initialize your project to use the cz-conventional-changelog adapter by typing:
+commitizen init cz-conventional-changelog --save-dev --save-exact
+
+
+
 -- add faker
 npm i -D faker @types/faker
 
