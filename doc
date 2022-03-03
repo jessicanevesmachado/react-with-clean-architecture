@@ -46,6 +46,7 @@ O Commitizen é uma biblioteca que vai nos ajudar a criar os commits seguindo o 
 
 Install Commitizen with 
 npm install --save-dev commitizen.
+npm i -D commitizen-emoji
 
 Next, initialize your project to use the cz-conventional-changelog adapter by typing:
 commitizen init cz-conventional-changelog --save-dev --save-exact
