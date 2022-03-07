@@ -7,5 +7,9 @@ module.exports = {
     testEnvironment: 'node',
     transform: {
       '.+\\.(ts|tsx)$': 'ts-jest'
+    },
+    moduleNameMapper: {
+      '@data/(.*)': '<rootDir>/src/data/$1', 
+      '@domain/(.*)': '<rootDir>/src/domain/$1', 
     }
   }

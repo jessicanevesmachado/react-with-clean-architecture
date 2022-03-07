@@ -57,3 +57,19 @@ commitizen init cz-conventional-changelog --save-dev --save-exact
 npm i -D faker @types/faker
 
 
+-- add modulos no typescript
+no arquivo ts.config
+ "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@data/*":["data/*"],
+      "@domain/*":["domain/*"]
+    },
+
+exemplo de importacao--> import { AuthenticationParams } from '@domain/usecase/authentication'
+
+No jest config add
+-->  moduleNameMapper: {
+      '@data/(.*)': '<rootDir>/src/data/$1', 
+      '@domain/(.*)': '<rootDir>/src/domain/$1', 
+    }
