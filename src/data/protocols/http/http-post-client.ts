@@ -1,4 +1,4 @@
-import { HttpResponse } from "./http-response";
+import { HttpResponse } from ".";
 
 // interface segregation principle : interfaces pequenas. so com o post sem o get
 export type HttpPostParams<T> = {
