@@ -19,7 +19,9 @@
     "paths": {
       "@data/*": ["data/*"],
       "@domain/*": ["domain/*"]
-    }
+    },
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": ["src"]
 }
