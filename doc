@@ -69,21 +69,35 @@ No jest config add
 '@domain/(._)': '<rootDir>/src/domain/$1',
 }
 
-
-*** Instalando o React
+\*\*\* Instalando o React
 npm i react react-dom
 npm i @types/react @types/react-dom -D
 
-** cria a pasta public e cria o index.html
+\*\* cria a pasta public e cria o index.html
 e gera o html, importante ter o arquivo de id main, para enjetar o react
 
-** usa scripts externos do react
+\*\* usa scripts externos do react
 acessa o react cdn e pega os links de producao e coloca no index.html
-isso pois os scripts de react sao mto grande, ai no web pack pode falar 
+isso pois os scripts de react sao mto grande, ai no web pack pode falar
 pro nao gerar o bundle do react.
 
-
-*** Instalando o Webpack
-
+\*\*\*\* que é o Web Pack?
 web pack gera javascript a partir de todo nosso codigo typescript
 ele gera um arquivo . bundle.js que é o arquivo gerado minificado
+
+\*\*\*\* Por que usar o Web Pack?
+Porque o CRA nao permite alterar diversas configuracoes, do jest, typescript eslint, etc e isso é ruim
+pq se precisar mudar de arquitetura no futuro, vai ter que mudar todo o codigo.
+nao quero depender do cra pra configuracoes do projeto.
+
+\*\*\* Instalando o Webpack
+npm i -D webpack webpack-cli webpack-dev-server
+npm i -D clean-webpack-plugin evita usar cache
+npm i -D eslint-plugin-reac
+npm i -D node-sass sass-loader css-loader style-loader ts-loader
+npm i -D identity-obj-proxy --> toda a vez que o jest encontrar um arquivo .scss essa biblioteca resolve
+
+cria na raiz o arquivo webpack.config.js
+add o script no package "start": "webpack-dev-server --open",
+
+composition root -> main layer
