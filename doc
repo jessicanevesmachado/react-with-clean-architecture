@@ -74,6 +74,16 @@ No jest config add
 npm i react react-dom
 npm i @types/react @types/react-dom -D
 
+** cria a pasta public e cria o index.html
+e gera o html, importante ter o arquivo de id main, para enjetar o react
+
+** usa scripts externos do react
+acessa o react cdn e pega os links de producao e coloca no index.html
+isso pois os scripts de react sao mto grande, ai no web pack pode falar 
+pro nao gerar o bundle do react.
+
+
+*** Instalando o Webpack
 
 web pack gera javascript a partir de todo nosso codigo typescript
 ele gera um arquivo . bundle.js que é o arquivo gerado minificado
