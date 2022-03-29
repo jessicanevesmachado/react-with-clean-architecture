@@ -3,73 +3,77 @@ Configurando o ambiente
 git init
 npm init -y
 
-***Biblioteca que ajudar a realizar commits no padrao: chore, fix feat.. etc
+\*\*\*Biblioteca que ajudar a realizar commits no padrao: chore, fix feat.. etc
 npm i -D git-commit-msg-linter
 
-***instalar typescript
+\*\*\*instalar typescript
 npm i - D typescript @types/node
 add o tsconfig --> usar o padrao do cra
 
-***instalar o eslint u
+\*\*\*instalar o eslint u
 npm i -D eslint eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard @typescript-eslint/eslint-plugin
 
 add eslintrc.json --> onde tera as regras do lint
 add eslintignore --> onde ignore arquivos pro lint
 
-*** add husk impede subir commit defeituosos
+\*\*\* add husk impede subir commit defeituosos
 npm i -D lint-staged husky
 
-add o arquivo .lintstagedrc.json --> pega todos os arquivos que vao entrar no proximo commit 
-e em cima desses arquivos, eu quero aplicar alguns scripts. 
+add o arquivo .lintstagedrc.json --> pega todos os arquivos que vao entrar no proximo commit
+e em cima desses arquivos, eu quero aplicar alguns scripts.
 exemplo: antes de subir arquivos do tipo ts ou tsx rode tal script.. isso é configurado no .lintstagedrc.json
 
 Husk --> add o arquivo huskyrc e no pre commit o husk chama o lint-staged que bate na conf do arquivo .lintstagedrc.json
 
-add o scrip no package -->  "prepare": "husky install"
+add o scrip no package --> "prepare": "husky install"
 executa --> npm run prepare
 cria o hook de pre commit --> npx husky add .husky/pre-commit "npx lint-staged"
 
-** instalar o jest para typescript
+\*\* instalar o jest para typescript
 npm i -D jest @types/jest ts-jest
 add o arquivo --> jest.config
 
 explicacao do package script
- "test": "jest --passWithNoTests", // por padrao o jest nao aceita testes sem passar, por isso coloca essa fleg
-    "test:staged": "npm test -- --findRelatedTests", // ele vai procurar dentro dos arquivos no proximos commit, e roda somente esses testes, previne rodar
-    todos os teste do sistema.
-    "test:ci": "npm test -- --coverage",
+"test": "jest --passWithNoTests", // por padrao o jest nao aceita testes sem passar, por isso coloca essa fleg
+"test:staged": "npm test -- --findRelatedTests", // ele vai procurar dentro dos arquivos no proximos commit, e roda somente esses testes, previne rodar
+todos os teste do sistema.
+"test:ci": "npm test -- --coverage",
 
-
-
-***  Instalando o Commitizen
+\*\*\* Instalando o Commitizen
 O Commitizen é uma biblioteca que vai nos ajudar a criar os commits seguindo o padrão do Conventional Commit
 
-Install Commitizen with 
+Install Commitizen with
 npm install --save-dev commitizen.
 npm i -D commitizen-emoji
 
 Next, initialize your project to use the cz-conventional-changelog adapter by typing:
 commitizen init cz-conventional-changelog --save-dev --save-exact
 
-
-
 -- add faker
 npm i -D faker @types/faker
 
-
 -- add modulos no typescript
 no arquivo ts.config
- "rootDir": "src",
-    "baseUrl": "src",
-    "paths": {
-      "@data/*":["data/*"],
-      "@domain/*":["domain/*"]
-    },
+"rootDir": "src",
+"baseUrl": "src",
+"paths": {
+"@data/_":["data/_"],
+"@domain/_":["domain/_"]
+},
 
 exemplo de importacao--> import { AuthenticationParams } from '@domain/usecase/authentication'
 
 No jest config add
--->  moduleNameMapper: {
-      '@data/(.*)': '<rootDir>/src/data/$1', 
-      '@domain/(.*)': '<rootDir>/src/domain/$1', 
-    }
+--> moduleNameMapper: {
+'@data/(._)': '<rootDir>/src/data/$1',
+'@domain/(._)': '<rootDir>/src/domain/$1',
+}
+
+
+*** Instalando o React
+npm i react react-dom
+npm i @types/react @types/react-dom -D
+
+
+web pack gera javascript a partir de todo nosso codigo typescript
+ele gera um arquivo . bundle.js que é o arquivo gerado minificado
