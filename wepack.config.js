@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: ".src/main/index.tsx", // informa qual é o primeiro script a ser executado
+  entry: "./src/main/index.tsx", // informa qual é o primeiro script a ser executado
   output: {
     path: path.join(__dirname, "public/js"), // informa onde o arquivo deve ser gerado
     publicPath: "/public/js/",
